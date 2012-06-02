@@ -1,5 +1,8 @@
 = simple_form_for :transaction,  method: :put do |form|
-  = form.input :message
-  = form.input :personal_message
+  = form.hidden_field :user1, :value => @_current_user.id
+  = form.input :amount
+  = form.input :text
+  = form.label :friend
+  = form.input_field :friend, value: '', label: 'Friend'
   = form.input :photo, collection: ['f1','f2','f3']
   = form.button :submit, 'Update', class: 'btn-primary btn-large'

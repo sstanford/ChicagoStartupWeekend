@@ -1,4 +1,4 @@
-class HomeController < ActionController::Base
+class HomeController < ApplicationController
   rescue_from Rack::OAuth2::Client::Error, :with => :oauth2_error
 
   def index
@@ -16,16 +16,18 @@ class HomeController < ActionController::Base
     access_token = facebook_client.access_token! :client_auth_body  # => Rack::OAuth2::AccessToken
     fb_user = FbGraph::User.me(access_token).fetch
 
-    current_user = User.where(facebook_id: fb_user.identifier)
+    user = User.where(facebook_id: fb_user.identifier).first
 
-    if old_user.empty?
-      current_user = User.create!( pending: false,
+    if user
+      set_current_user( User.create!( pending: false,
                                  facebook_id: fb_user.identifier,
                                  name: fb_user.name,
                                  email: fb_user.email,
-                                 facebook_token: access_token.access_token)
+                                 facebook_token: access_token.access_token))
+    else
+      set_current_user(user)
     end
-    redirect_to controller: TransactionsController, action: :new
+    redirect_to '/transactions/new'
   end
 
   private

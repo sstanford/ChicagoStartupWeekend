@@ -2,8 +2,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   private
-  def current_user=(value)
+  def set_current_user(value)
     session[:current_user_id] = value.id
+  end
+
+  def authenticate
+    current_user
   end
 
   def current_user
