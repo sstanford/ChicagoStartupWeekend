@@ -3,6 +3,7 @@
   = form.input :amount
   = form.input :text
   = form.label :friend
-  = form.input_field :friend, value: '', label: 'Friend'
+  = select("abc", "xyz_id", @friends)
   = form.input :photo, collection: ['f1','f2','f3']
-  = form.button :submit, 'Update', class: 'btn-primary btn-large'
+  = form.button :submit, 'update', class: 'btn-primary btn-large'
+

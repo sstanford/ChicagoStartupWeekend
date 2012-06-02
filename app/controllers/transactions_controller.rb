@@ -3,6 +3,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
+    @friends = current_user.facebook_friend_search('ds')
     render :layout => "application"
   end
 end
