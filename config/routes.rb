@@ -11,7 +11,7 @@ ChicagoStartupWeekend::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :transactions, only: [:show, :new]
 
   # Sample resource route with options:
   #   resources :products do
@@ -49,7 +49,7 @@ ChicagoStartupWeekend::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
-  root :to => 'transactions#show_post'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

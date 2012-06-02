@@ -1,5 +1,5 @@
 class TransactionsController < ActionController::Base
-  def show_post
+  def new
     @transaction = Transaction.new
     render :layout => "application"
   end

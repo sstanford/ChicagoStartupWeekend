@@ -13,14 +13,36 @@
 
 ActiveRecord::Schema.define(:version => 20120602072348) do
 
+  create_table "transaction_details", :force => true do |t|
+    t.string   "status"
+    t.integer  "user_id"
+    t.integer  "transaction_id"
+    t.integer  "payee_user_id"
+    t.integer  "amount_in_cents"
+    t.string   "confirmation_number"
+    t.string   "processor"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
   create_table "transactions", :force => true do |t|
-    t.string   "message"
-    t.string   "personal_message"
-    t.integer  "photo"
-    t.integer  "friend_id"
-    t.string   "friend_network"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "amount_in_cents"
+    t.string   "text"
+    t.string   "photo"
+    t.integer  "payer_user_id"
+    t.integer  "payee_user_id"
+    t.string   "status"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.boolean  "pending"
+    t.integer  "facebook_id"
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

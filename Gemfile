@@ -11,6 +11,9 @@ gem "heroku"
 gem 'haml'
 gem "haml-rails"
 gem 'simple_form'
+gem 'money'
+gem "factory_girl_rails", "~> 3.0"
+gem 'awesome_print'
 
 # Gems used only for assets and not required
 # in production environments by default.
