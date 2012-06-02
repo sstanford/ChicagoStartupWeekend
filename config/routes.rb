@@ -11,6 +11,10 @@ ChicagoStartupWeekend::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
+  ['start_login', 'end_login'].each do |home_route|
+    match home_route => "home##{home_route}"
+  end
+
   resources :transactions, only: [:show, :new]
 
   # Sample resource route with options:
