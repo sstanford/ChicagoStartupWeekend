@@ -14,8 +14,18 @@ class HomeController < ActionController::Base
   def end_login
     facebook_client.authorization_code = params[:code]
     access_token = facebook_client.access_token! :client_auth_body  # => Rack::OAuth2::AccessToken
-    ap FbGraph::User.me(access_token).fetch
-    
+    fb_user = FbGraph::User.me(access_token).fetch
+
+    current_user = User.where(facebook_id: fb_user.identifier)
+
+    if old_user.empty?
+      current_user = User.create!( pending: false,
+                                 facebook_id: fb_user.identifier,
+                                 name: fb_user.name,
+                                 email: fb_user.email,
+                                 facebook_token: access_token.access_token)
+    end
+    redirect_to controller: TransactionsController, action: :new
   end
 
   private

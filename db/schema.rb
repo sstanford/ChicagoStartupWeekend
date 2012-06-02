@@ -41,8 +41,9 @@ ActiveRecord::Schema.define(:version => 20120602072348) do
     t.integer  "facebook_id"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "facebook_token"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

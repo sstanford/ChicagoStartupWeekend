@@ -26,6 +26,7 @@ class CreateTransactions < ActiveRecord::Migration
       t.integer :facebook_id
       t.string  :name
       t.string  :email
+      t.string  :facebook_token
       t.timestamps
     end
 
