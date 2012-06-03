@@ -136,7 +136,6 @@ h3 {
 }
 
 .bottom-content {
-	position: relative;
 	top: 35px;
 }
 
@@ -366,13 +365,21 @@ img.bg {
 	padding: 15px 0 15px 0;
 }
 
-#footer p {
-	color: #808080;
-	font-size: 16px;
+#footer-home {
+	margin: 0 auto;
+	width: 580px;
+	padding: 15px 0 15px 0;
+}
+
+#footer p,
+#footer-home p {
+	color: #bcbcbc;
+	font-size: 14px;
 	line-height: 24px;
 }
 
-#footer span {
+#footer span,
+#footer-home span {
 	float: right;
 }
 
