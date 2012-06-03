@@ -1,29 +1,32 @@
 module LoadData
   def self.load
-    PayLevel.create!( amount: 100,
+    PayLevel.all.each do |pl|
+      pl.destroy
+    end
+    PayLevel.create!( amount: 1,
                       photo_url: 'http://www.belated.co/granny.gif',
                       description: 'Test description',
-                      message: "I've been a jerk!  I hope a 'better late than never' gesture wins your forgiveness",
+                      message: "I'm a bit of a jerk",
                       name: 'Test name')
-    PayLevel.create!( amount: 200,
+    PayLevel.create!( amount: 2,
                       photo_url: '',
                       description: '',
-                      message: '',
+                      message: "'I'm sorta of a jerk",
                       name: '')
-    PayLevel.create!( amount: 500,
+    PayLevel.create!( amount: 5,
                       photo_url: '',
                       description: '',
-                      message: '',
+                      message: "'I'm a jerk",
                       name: '')
-    PayLevel.create!( amount: 1000,
+    PayLevel.create!( amount: 10,
                       photo_url: '',
                       description: '',
-                      message: '',
+                      message: "'I'm really a jerk",
                       name: '')
-    PayLevel.create!( amount: 2000,
+    PayLevel.create!( amount: 20,
                       photo_url: '',
                       description: '',
-                      message: '',
+                      message: "'I'm an asshole",
                       name: '')
 
   end

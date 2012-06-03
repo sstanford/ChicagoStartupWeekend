@@ -1,0 +1,41 @@
+.row {
+	width: 566px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.column {
+  width: 250px;
+  float: left;
+}
+
+.align_right {
+  float: right;
+}
+
+.title{
+  background-color: #F15A22;
+  width: 233;
+  color: white; 
+  padding: 2;}
+
+.arrow_end{
+  background-image: url('/images/banner_tri_red.png');
+  float: right;}
+
+.inputs{
+  width: 233px;
+  margin: 4px 0px 6px 0px;
+}
+
+.small_logo{
+  background: url(../assets/logo_small.png);
+}
+
+
+
+
+
+
+
+
