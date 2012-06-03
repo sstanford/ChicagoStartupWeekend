@@ -66,6 +66,7 @@ ChicagoStartupWeekend::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   #
   FACEBOOK_SETTINGS = { app_id: 369584459769856,
-                        app_secret: '7602e71b92db2d82a9e219b293f92157'}
+                        app_secret: '7602e71b92db2d82a9e219b293f92157',
+                        url: 'http://www.belated.co/end_login'}
 
 end

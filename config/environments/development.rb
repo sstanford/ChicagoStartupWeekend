@@ -36,5 +36,6 @@ ChicagoStartupWeekend::Application.configure do
   config.assets.debug = true
 
   FACEBOOK_SETTINGS = { app_id: 336889909716882,
-                        app_secret: '1bee6d8838903b0ae810c06de7102b2e'}
+                        app_secret: '1bee6d8838903b0ae810c06de7102b2e',
+                        url: 'http://localhost:3000/end_login'}
 end
