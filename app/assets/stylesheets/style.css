@@ -11,6 +11,12 @@ a {
 	color: #000;
 }
 
+p {
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 18px;	
+}
+
 .container {
 	width: 600px;
 	margin: 0 auto;
@@ -62,8 +68,13 @@ a {
 }
 
 .bottom-content {
-	background: #444933;
-	height: 100px;
+	position: relative;
+	top: 35px;
+}
+
+.bottom-content h2 {
+	font-size: 16px;
+	margin-bottom: 10px;
 }
 
 .bottom-content #left-content {
@@ -85,9 +96,9 @@ a {
 #info-pic li {
     background:#F33454;
     float: left;
-    height: 50px;
-    margin-right: 35px;
-    width: 50px;
+    height: 30px;
+    margin-right: 5px;
+    width: 30px;
 }
 
 /*a.button_home  {
