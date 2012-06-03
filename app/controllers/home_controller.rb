@@ -31,6 +31,8 @@ class HomeController < ApplicationController
     else
       set_current_user(user)
     end
+    ap "asdasdasd"
+    ap session[:current_user_id]
     redirect_to '/transactions/new'
   end
 
