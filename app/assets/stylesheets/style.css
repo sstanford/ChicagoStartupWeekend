@@ -70,12 +70,13 @@ h3 {
 }
 
 .lady_panties {
-    top: -128px;
-    float: right;
-    height: 438px;
-    left: 210px;
-    position: absolute;
-    width: 469px;
+	background: url(../assets/lady.png);
+  top: -128px;
+  float: right;
+  height: 438px;
+  left: 210px;
+  position: absolute;
+  width: 469px;
 	border: 0;
 }
 
@@ -136,7 +137,6 @@ h3 {
 }
 
 .bottom-content {
-	position: relative;
 	top: 35px;
 }
 
@@ -228,7 +228,7 @@ h3 {
 	width: 309px;
 }
 
-#top-content-right p
+#top-content-right p {
 	color: #808080;
 	font-size: 18px;
 	line-height: 24px;
@@ -366,13 +366,21 @@ img.bg {
 	padding: 15px 0 15px 0;
 }
 
-#footer p {
-	color: #808080;
-	font-size: 16px;
+#footer-home {
+	margin: 0 auto;
+	width: 580px;
+	padding: 15px 0 15px 0;
+}
+
+#footer p,
+#footer-home p {
+	color: #bcbcbc;
+	font-size: 14px;
 	line-height: 24px;
 }
 
-#footer span {
+#footer span,
+#footer-home span {
 	float: right;
 }
 
