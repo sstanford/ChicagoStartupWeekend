@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :ending, :facebook_id, :name, :email, :facebook_token, :pending
+  attr_accessible :ending, :facebook_id, :first_name, :last_name, :email, :facebook_token, :pending
 
   def facebook_friend_search(starts_with)
     ::FacebookConnection.client

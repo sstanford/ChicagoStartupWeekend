@@ -1,9 +1,8 @@
 = simple_form_for :transaction, url: '/transactions/', method: :post do |form|
   = form.hidden_field :user1, :value => @_current_user.id
   = form.input :amount
-  = form.input :text
   = form.label :friend
   = select("abc", "xyz_id", @friends)
-  = form.input :photo, collection: ['f1','f2','f3']
+  = form.input :photo_url, collection: ['f1','f2','f3']
   = form.button :submit, 'update', class: 'btn-primary btn-large'
 
