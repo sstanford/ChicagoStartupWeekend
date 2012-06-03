@@ -1,8 +1,50 @@
-= simple_form_for :transaction, url: '/transactions/', method: :post do |form|
-  = form.hidden_field :user1, :value => @_current_user.id
-  = form.input :amount
-  = form.label :friend
-  = select("abc", "xyz_id", @friends)
-  = form.input :photo_url, collection: ['f1','f2','f3']
-  = form.button :submit, 'update', class: 'btn-primary btn-large'
+#header_small
+  .inner_left
+    %h1
+      %img(src='/assets/logo_small.png')
+  .inner_right
+    %a(href='/start_login')
 
+#main-content
+  .row
+    .column
+      .title
+        1.) Who were you a Jerk to?
+      .arrow_end.align_right
+      .friend_list
+        %select.inputs
+          - @friends.each do | friend|
+            %option{id: "#{friend.last}"} 
+              = friend.first
+    .column.float_right
+      Its the thought that counts
+  .clear
+  .row
+    .preview
+      %img(src="/images/graphic_preview.png")
+  .row
+    .column
+      .title
+        Choose a level of apology
+      .pay_level
+        %select.inputs
+          - PayLevel.all.each do|pay_level|
+            %option{id: "#{pay_level.id}"}
+              ="#{pay_level.amount.format} - #{pay_level.message}"
+      .title
+        Choose the gift
+      .options
+        %select.inputs
+          %option Amazon
+          %option  Itunes
+          %option  Video
+    .column
+      .title
+        Personalize Message
+      .personalize_message
+        %textarea.inputs{:rows => 4, :name => "personalize_message", :id => "personalize_message"}
+  .clear
+  .row
+    .column.align_right
+      %button
+        Send
