@@ -15,7 +15,7 @@ ChicagoStartupWeekend::Application.routes.draw do
     match home_route => "home##{home_route}"
   end
 
-  resources :transactions, only: [:show, :new]
+  resources :transactions, only: [:show, :new, :create]
 
   # Sample resource route with options:
   #   resources :products do

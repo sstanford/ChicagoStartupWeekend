@@ -1,4 +1,4 @@
-= simple_form_for :transaction,  method: :put do |form|
+= simple_form_for :transaction, url: '/transactions/', method: :post do |form|
   = form.hidden_field :user1, :value => @_current_user.id
   = form.input :amount
   = form.input :text

@@ -1,4 +1,5 @@
 class Transaction < ActiveRecord::Base
+  attr_accessible :amount, :text, :photo, :payer_user_id, :payee_user_id, :status
 composed_of :amount,
   :class_name => "Money",
   :mapping => [%w(amount_cents cents)],
@@ -8,12 +9,14 @@ composed_of :amount,
 
   def post_transaction_to_facebook
     FacebookConnection.client
-    me = FbGraph::User.me(ACCESS_TOKEN)
-    me.feed!( message: 'Updating via FbGraph',
-      picture: 'https://graph.facebook.com/matake/picture',
-      link: 'https://github.com/nov/fb_graph',
-      name: 'FbGraph',
-      description: 'A Ruby wrapper for Facebook Graph API')
+    me = FbGraph::User.new(User.find(payee_user_id).facebook_id, :access_token => User.find(payer_user_id).facebook_token)
+    #me = FbGraph::User.fetch(User.find(payer_user_id).facebook_token)
+    #user = FbGraph::User.fetch('matake')
+    me.feed!( message: text,
+      picture: photo, 
+      link: 'http://www.google.com',
+      name: 'test',
+      description: text)
     end
 end
 
