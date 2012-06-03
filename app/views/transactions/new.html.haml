@@ -1,8 +1,48 @@
-= simple_form_for :transaction, url: '/transactions/', method: :post do |form|
-  = form.hidden_field :user1, :value => @_current_user.id
-  = form.input :amount
-  = form.label :friend
-  = select("abc", "xyz_id", @friends)
-  = form.input :photo_url, collection: ['f1','f2','f3']
-  = form.button :submit, 'update', class: 'btn-primary btn-large'
-
+%img.bg(src="../assets/bgfull.png")
+.container-full
+	#header
+		.inner
+			%h1#logo-small
+				Belated
+	
+	#main-content
+		#top-content-left
+			%h3
+				1. Who are you a jerk to?
+			.styled-select
+				%select{:name => "dropdown"} 
+					%option
+						namff
+		#top-content-right
+			%p
+				It's the thought that counts, even if its belated. Blash Blah blah, your friend should love jerk.
+		%img.main_img_wrap(src="../assets/lady-full.png")
+			
+		#top-content-left
+			%h3
+				2. Choose Level of Apology
+			.styled-select
+				%select{:name => "dropdown"} 
+					%option
+						name
+					%option
+						name 2
+						
+			%h3
+				3. Choose Payment Method
+			.styled-select
+				%select{:name => "dropdown"} 
+					%option
+						name
+					%option
+						name 2
+		
+		#top-content-right
+			%h3
+				4. Enter Personalize Message
+			%textarea.fancy-box
+				Personal Message
+			%button.fancy-button
+				send
+					
+		.clear

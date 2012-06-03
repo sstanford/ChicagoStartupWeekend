@@ -5,6 +5,10 @@ class HomeController < ApplicationController
     render :layout => "application"
   end
 
+  def transactions_new
+  end
+	
+
   def start_login
     redirect_to facebook_client.authorization_uri(
       :scope => [:email, :publish_stream, :offline_access]

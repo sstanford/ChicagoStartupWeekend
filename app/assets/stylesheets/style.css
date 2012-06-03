@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
 	
 }
@@ -17,8 +29,17 @@ p {
 	line-height: 18px;	
 }
 
+h3 {
+	
+}
+
 .container {
 	width: 600px;
+	margin: 0 auto;
+}
+
+.container-full {
+	width: 640px;
 	margin: 0 auto;
 }
 
@@ -29,13 +50,21 @@ p {
 }
 
 #header {
-	height:210px;
+	/*height:210px;*/
 }
 
 #header #logo {
 	background: url(../assets/logo.png);
-	height:193px ;
-	width: 521px ;
+	height:193px;
+	width: 521px;
+	display: block;
+	text-indent: -9999em;
+}
+
+#header #logo-small {
+	background: url(../assets/logo_small.png) no-repeat;
+	height:96px;
+	width: 258px;
 	display: block;
 	text-indent: -9999em;
 }
@@ -59,12 +88,51 @@ p {
 	position: relative;
 }
 
-#buttons_contain li {
+#buttons_contain li a {
 	margin-bottom: 20px;
   background: #5BA4ED;
+	color: #fff;
+	text-shadow: 0 -2px 0 #2f5e8f;
+	font-family: 'BebasNeueRegular';
   font-size: 30px;
   padding: 40px 50px;
 	text-align: center;
+	display: block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow:
+    4px 5px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  -moz-box-shadow:
+    4px 5px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  box-shadow:
+    4px 5px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  -moz-transition: -moz-box-shadow .2s ease-in-out;
+  -o-transition: -o-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+}
+
+
+#buttons_contain li a:hover {
+	background: #579de4;
+	color: #dbd876;
+  -webkit-box-shadow:
+    2px 2px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  -moz-box-shadow:
+    2px 2px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  box-shadow:
+    2px 2px 0 #1a74a1,
+    0 15px 20px rgba(0,0,0,.35);
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  -moz-transition: -moz-box-shadow .2s ease-in-out;
+  -o-transition: -o-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
 }
 
 .bottom-content {
@@ -73,20 +141,29 @@ p {
 }
 
 .bottom-content h2 {
-	font-size: 16px;
+	color: #e77575;
+	font-size: 25px;
+	letter-spacing: 3px;
+	font-family: 'BebasNeueRegular';
 	margin-bottom: 10px;
+}
+
+.bottom-content p {
+	color: #949494;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .bottom-content #left-content {
 	float: left;
-	width: 200px;
+	width: 300px;
 	
 }
 
 .bottom-content #right-content {
 	float: left;
-	width: 200px;
-	margin-left: 72px;
+	width: 250px;
+	margin-left: 15px;
 }
 
 #info-pic {
@@ -94,19 +171,140 @@ p {
 }
 
 #info-pic li {
-    background:#F33454;
-    float: left;
-    height: 30px;
-    margin-right: 5px;
-    width: 30px;
+  background:#E0E0E0;
+  float: left;
+  height: 45px;
+  margin-right: 7px;
+  width: 45px;
+	border: 1px solid #c9c9c9;
+	padding: 3px 4px;
 }
 
-/*a.button_home  {
-  background: #5BA4ED;
-  font-size: 30px;
-  padding: 40px 50px;
+#info-pic li:hover {
+	background:#ececec;
+}
+
+.main_img_wrap {
+	margin-bottom: 15px;
+	width: 640px;
+}
+
+#top-content-left {
+	float: left;
+	width: 309px;
+}
+
+#top-content-left h3 {
+	background: #f15a22 url(../assets/arrow_bg.png) no-repeat right center;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.2em;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-family: 'BebasNeueRegular';
+	font-weight: 100;
+}
+
+#top-content-right {
+	float: right;
+	width: 309px;
+}
+
+#top-content-right p{
+	color: #808080;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+#top-content-right h3 {
+	background-color: #f15a22;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.2em;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-family: 'BebasNeueRegular';
+	font-weight: 100;
+}
+
+.styled-select select {
+  background: transparent;
+  width: 335px;
+  padding: 5px;
+  font-size: 16px;
+	float: left;
+  border: 1px solid #ccc;
+  height: 34px;
+}
+
+.styled-select {
+  width: 310px;
+  height: 32px;
+  overflow: hidden;
+  background: url(../assets/arrow-down.png) no-repeat 279px 2px #ddd;
 	position: relative;
-	top: 200px;
-	right: 10px;
-}*/
+	z-index: 1;
+	margin-bottom: 15px;
+}
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+ 
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+ 
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+		z-index: -1
+}
+ 
+@media screen and (max-width: 1024px){
+    img.bg {
+    left: 50%;
+    margin-left: -512px;
+}
+}
+
+.fancy-box {
+    height: 100px;
+    padding: 10px;
+    width: 310px;
+	margin-bottom: 5px;
+}
+
+.fancy-button {
+	margin-bottom: 20px;
+  background: #66ffc1;
+	border-bottom: 4px solid #3D9974;
+	border-right: 4px solid #3D9974;
+	color: #338061;
+	text-shadow: 0 -2px 0 #2f5e8f;
+	font-family: 'BebasNeueRegular';
+  font-size: 25px;
+  padding: 0 50px;
+	text-align: center;
+	display: block;
+	font-weight: 100;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  -moz-transition: -moz-box-shadow .2s ease-in-out;
+  -o-transition: -o-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+	float: right;
+}
+
+.fancy-button:hover {
+  background: #60eeb5;
+	border-bottom: 3px solid #3D9974;
+	border-right: 3px solid #3D9974;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  -moz-transition: -moz-box-shadow .2s ease-in-out;
+  -o-transition: -o-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+}
 

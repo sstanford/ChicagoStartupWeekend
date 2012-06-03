@@ -1,40 +1,43 @@
-#header
-	.inner
-		%h1#logo
-			Belated
-
-#main-content
-	.inner
-	%img.lady_panties(src="../assets/lady.png")
-		#buttons_contain
-			%ul
-				%li
-					%a.button_home.b1(href = 'bob')
-						I'm a Jerk
-				%li
-					%a.button_home.b2(href = 'bob')	
-						My friend 
-						%br 
-						is a Jerk
-	.clear
-
-.bottom-content
-	.inner 
-		#left-content
-			%h2
-				Anything
-			%p
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere lorem sit amet dolor dignissim quis aliquet tortor aliquet. Maecenas sagittis dapibus mattis. 
-		#right-content
-			%h2
-				aliquet tortor aliquet. Maecenas sagittis dapibus mattis.
-			%ul#info-pic
-				%li
-					%img(src="" href="")
-				%li
-					%img(src="" href="")
-				%li
-					%img(src="" href="")
-				%li
-					%img(src="" href="")
-	.clear
+%img.bg(src="../assets/bgfull.png")
+.container
+	#header
+		.inner
+			%h1#logo
+				Belated
+	
+	#main-content
+		.inner
+		%img.lady_panties(src="../assets/lady.png")
+			#buttons_contain
+				%ul
+					%li
+						%a.button_home.b1(href = 'bob')
+							%span 
+								Im a Jerk
+					%li
+						%a.button_home.b2(href = 'bob')	
+							My friend 
+							%br 
+							is a Jerk
+		.clear
+	
+	.bottom-content
+		.inner 
+			#left-content
+				%h2
+					Anything
+				%p
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere lorem sit amet dolor dignissim quis aliquet tortor aliquet. Maecenas sagittis dapibus mattis. 
+			#right-content
+				%h2
+					Never Forget!
+				%ul#info-pic
+					%li
+						%img(src="../assets/place-img.png" href="")
+					%li
+						%img(src="../assets/place-img.png" href="")
+					%li
+						%img(src="../assets/place-img.png" href="")
+					%li
+						%img(src="../assets/place-img.png" href="")
+		.clear
