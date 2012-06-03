@@ -14,10 +14,10 @@ class TransactionsController < ApplicationController
 
   def create
     facebook_id = params['friend_id']
-    user = User.where(facebook_id: facebook_id.to_i).first
+    user = User.where(facebook_id: facebook_id).first
     unless user
       user = User.create!(pending: true,
-                          facebook_id: facebook_id.to_i,
+                          facebook_id: facebook_id,
                           first_name: 'fake_first',
                           last_name: 'fake_last')
     end
