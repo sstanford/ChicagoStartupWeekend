@@ -1,48 +1,44 @@
 %img.bg(src="../assets/bgfull.png")
 .container-full
-	#header
-		.inner
-			%h1#logo-small
-				Belated
-	
-	#main-content
-		#top-content-left
-			%h3
-				1. Who are you a jerk to?
-			.styled-select
-				%select{:name => "dropdown"} 
-					%option
-						namff
-		#top-content-right
-			%p
-				It's the thought that counts, even if its belated. Blash Blah blah, your friend should love jerk.
-		%img.main_img_wrap(src="../assets/lady-full.png")
-			
-		#top-content-left
-			%h3
-				2. Choose Level of Apology
-			.styled-select
-				%select{:name => "dropdown"} 
-					%option
-						name
-					%option
-						name 2
-						
-			%h3
-				3. Choose Payment Method
-			.styled-select
-				%select{:name => "dropdown"} 
-					%option
-						name
-					%option
-						name 2
-		
-		#top-content-right
-			%h3
-				4. Enter Personalize Message
-			%textarea.fancy-box
-				Personal Message
-			%button.fancy-button
-				send
-					
-		.clear
+  #header
+    .inner
+      %h1#logo-small
+        Belated
+
+  #main-content
+    = form_tag "/transactions", :method => "post" do
+      #top-content-left
+        %h3
+          1. Who are you a jerk to?
+        .styled-select
+          %select{:name => "friend_id", :id => "friend_id"} 
+            - @friends.each do |friend|
+              %option{value: "#{friend.last}"}
+                = friend.first
+      #top-content-right
+        %p
+          It's the thought that counts, even if its belated. Blash Blah blah, your friend should love jerk.
+      %img.main_img_wrap(src="/images/graphic_preview.png")
+
+      #top-content-left
+        %h3
+          2. Choose Level of Apology
+        .styled-select
+          %select{:name => "pay_level"}
+            - PayLevel.all.each do|pay_level|
+              %option{value: "#{pay_level.id}"}
+                ="#{pay_level.amount.format} - #{pay_level.message}"
+        %h3
+          3. Choose Payment Method
+        .styled-select
+          %select{:name => "payment_style"} 
+            %option Amazon
+            %option  Itunes
+            %option  Video
+      #top-content-right
+        %h3
+          4. Enter Personalize Message
+        %textarea.fancy-box{:name => 'message'}
+          Personal Message
+        %input.fancy-button{:type=>:submit}
+    .clear

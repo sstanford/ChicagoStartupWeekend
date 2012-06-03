@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   private
   def set_current_user(value)
     session[:current_user_id] = value.id
+    ap session[:current_user_id]
   end
 
   def authenticate
