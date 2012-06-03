@@ -24,7 +24,7 @@ class TransactionsController < ApplicationController
     pay_level = PayLevel.find(params['pay_level'].to_i)
     transaction = Transaction.create!(amount: pay_level.amount,
                                       description:  params['message'],
-                                      message:  'This is a test please ignore',
+                                      message:  pay_level.message,
                                       photo_url: pay_level.photo_url,
                                       payer_user_id: current_user.id,
                                       payee_user_id: user.id,
