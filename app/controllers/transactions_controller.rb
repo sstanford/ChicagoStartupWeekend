@@ -7,6 +7,11 @@ class TransactionsController < ApplicationController
     render :layout => "application"
   end
 
+  def show
+    @transaction = Transaction.find(params[:id])
+    render :layout => "application"
+  end
+
   def create
     facebook_id = params[:abc][:abc_xyz_id]
     user = User.where(facebook_id: facebook_id.to_i).first

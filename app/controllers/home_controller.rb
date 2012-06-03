@@ -20,13 +20,13 @@ class HomeController < ApplicationController
     unless user
       set_current_user( User.create!( pending: false,
                                  facebook_id: fb_user.identifier,
-                                 name: fb_user.name,
+                                 first_name: fb_user.first_name,
+                                 last_name: fb_user.last_name,
                                  email: fb_user.email,
                                  facebook_token: access_token.access_token))
     else
       set_current_user(user)
     end
-    ap  FbGraph::User.me(User.last.facebook_token).fetch
     redirect_to '/transactions/new'
   end
 
