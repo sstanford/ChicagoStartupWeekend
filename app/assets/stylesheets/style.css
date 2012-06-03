@@ -70,12 +70,13 @@ h3 {
 }
 
 .lady_panties {
-    top: -128px;
-    float: right;
-    height: 438px;
-    left: 210px;
-    position: absolute;
-    width: 469px;
+	background: url(../assets/lady.png);
+  top: -128px;
+  float: right;
+  height: 438px;
+  left: 210px;
+  position: absolute;
+  width: 469px;
 	border: 0;
 }
 
