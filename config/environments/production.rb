@@ -64,4 +64,8 @@ ChicagoStartupWeekend::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  #
+  FACEBOOK_SETTINGS = { app_id: 369584459769856,
+                        app_secret: '7602e71b92db2d82a9e219b293f92157'}
+
 end

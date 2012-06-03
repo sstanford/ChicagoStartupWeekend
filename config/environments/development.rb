@@ -34,4 +34,7 @@ ChicagoStartupWeekend::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  FACEBOOK_SETTINGS = { app_id: 336889909716882,
+                        app_secret: '1bee6d8838903b0ae810c06de7102b2e'}
 end
