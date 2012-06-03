@@ -14,13 +14,11 @@
 ActiveRecord::Schema.define(:version => 20120603015340) do
 
   create_table "pay_levels", :force => true do |t|
-    t.integer  "amount_in_cents"
-    t.string   "photo_url"
-    t.string   "description"
-    t.integer  "message"
-    t.integer  "name"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.integer "amount_in_cents"
+    t.string  "photo_url"
+    t.string  "description"
+    t.string  "message"
+    t.string  "name"
   end
 
   create_table "transaction_details", :force => true do |t|
@@ -37,13 +35,15 @@ ActiveRecord::Schema.define(:version => 20120603015340) do
 
   create_table "transactions", :force => true do |t|
     t.integer  "amount_in_cents"
-    t.string   "text"
-    t.string   "photo"
     t.integer  "payer_user_id"
     t.integer  "payee_user_id"
     t.string   "status"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "description"
+    t.string   "message"
+    t.string   "photo_url"
+    t.integer  "pay_level_id"
   end
 
   create_table "users", :force => true do |t|
