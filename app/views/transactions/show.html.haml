@@ -1,41 +1,41 @@
 %img.bg(src="../assets/bgfull.png")
 .container-full
-	#header
-		.inner
-			%h1#logo-small
-				Belated
-	
-	#main-content
-		#top-content-left-sec
-			%h3
-				Who are you a jerk to?
+  #header
+    .inner
+      %h1#logo-small
+        Belated
 
-    %img.main_img_wrap{src=> @transaction.photo_url}
-		
-		#comment-bubble
-			%h2
-				M
-			%p 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue mi ut sapien ornare eu sagittis arcu ultrices. Pellentesque egestas
-		#comment-talk
-		#top-content-left-thrd
-			%h3
-				From: Derrick T
-		
-		#top-content-right
-			%a.fancy-button#go-left(href="")
-				Redeem
-			%a.fancy-button#go-left(href="")
-				You a jerk?
-			.clear
-			%p
-				Redeem your $20 giftcard as proof as ImJerkov 
-				%a(href="")
-					something 
-					
-		.clear
+  #main-content
+    #top-content-left-sec
+      %h3
+        Who are you a jerk to?
+
+    %img.main_img_wrap{:src=> @transaction.photo_url}
+
+    #comment-bubble
+      %h2
+        M
+      %p 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue mi ut sapien ornare eu sagittis arcu ultrices. Pellentesque egestas
+    #comment-talk
+    #top-content-left-thrd
+      %h3
+        From: Derrick T
+
+    #top-content-right
+      %a.fancy-button#go-left(href="")
+        Redeem
+      %a.fancy-button#go-left(href="")
+        You a jerk?
+      .clear
+      %p
+        Redeem your $20 giftcard as proof as ImJerkov 
+        %a(href="")
+          something 
+
+    .clear
 
 #footer 
-	%p
-		&copy; 2012 to Belated. All Rights Reserved. 
-		%span Startup Weekend
+  %p
+    &copy; 2012 to Belated. All Rights Reserved. 
+    %span Startup Weekend
