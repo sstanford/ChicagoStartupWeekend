@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
     user.friends(starts_with: 'ad').each do |user|
       friend_return << [user.name, user.identifier] 
     end
-    friend_return
+    friend_return.sort{|x,y| x.first <=> y.first}
   end
 end
