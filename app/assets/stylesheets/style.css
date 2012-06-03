@@ -189,13 +189,31 @@ h3 {
 	width: 640px;
 }
 
-#top-content-left {
+#top-content-left,
+#top-content-left-thrd {
 	float: left;
 	width: 309px;
 }
 
-#top-content-left h3 {
+#top-content-left-sec {
+	float: left;
+	width: 640px;
+}
+
+#top-content-left h3, 
+#top-content-left-sec h3 {
 	background: #f15a22 url(../assets/arrow_bg.png) no-repeat right center;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.2em;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-family: 'BebasNeueRegular';
+	font-weight: 100;
+}
+
+#top-content-left-thrd h3 {
+	background: #f2565b url(../assets/arrow_bg.png) no-repeat right center;
 	color: #fff;
 	font-size: 18px;
 	letter-spacing: 0.2em;
@@ -210,15 +228,14 @@ h3 {
 	width: 309px;
 }
 
-#top-content-right p{
+#top-content-right p
 	color: #808080;
 	font-size: 18px;
 	line-height: 24px;
 }
 
-
 #top-content-right h3 {
-	background-color: #f15a22;
+	background: #f15a22 url(../assets/arrow_bg.png) no-repeat right center;
 	color: #fff;
 	font-size: 18px;
 	letter-spacing: 0.2em;
@@ -306,5 +323,56 @@ img.bg {
   -moz-transition: -moz-box-shadow .2s ease-in-out;
   -o-transition: -o-box-shadow .2s ease-in-out;
   transition: box-shadow .2s ease-in-out;
+}
+
+#go-left {
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 100;
+  margin-right: 5px;
+  padding: 15px 40px;
+}
+
+#comment-bubble {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+}
+
+#comment-talk {
+	background: url(../assets/cmt-bubble.png) no-repeat;
+  height: 20px;
+  width: 40px;
+	margin: 0 0 .3em 2em;
+}
+
+#comment-bubble h2 {
+	font-family: 'BebasNeueRegular';
+  font-size: 25px;
+	margin-bottom: 10px;
+} 
+
+#comment-bubble p {
+	font-family: Arial;
+	line-height: 24px;
+	font-size: 16px;
+	font-style: italic;
+}
+
+#footer {
+	margin: 0 auto;
+	width: 640px;
+	padding: 15px 0 15px 0;
+}
+
+#footer p {
+	color: #808080;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+#footer span {
+	float: right;
 }
 
