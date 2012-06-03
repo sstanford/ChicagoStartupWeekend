@@ -1,0 +1,101 @@
+body {
+	
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.inner {
+	width: 580px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#header {
+	height:210px;
+}
+
+#header #logo {
+	background: url(../assets/logo.png);
+	height:193px ;
+	width: 521px ;
+	display: block;
+	text-indent: -9999em;
+}
+
+.lady_panties {
+    top: -128px;
+    float: right;
+    height: 438px;
+    left: 210px;
+    position: absolute;
+    width: 469px;
+	border: 0;
+}
+
+#main-content {
+	position: relative;
+}
+
+#buttons_contain {
+	float: left;
+	position: relative;
+}
+
+#buttons_contain li {
+	margin-bottom: 20px;
+  background: #5BA4ED;
+  font-size: 30px;
+  padding: 40px 50px;
+	text-align: center;
+}
+
+.bottom-content {
+	background: #444933;
+	height: 100px;
+}
+
+.bottom-content #left-content {
+	float: left;
+	width: 200px;
+	
+}
+
+.bottom-content #right-content {
+	float: left;
+	width: 200px;
+	margin-left: 72px;
+}
+
+#info-pic {
+	
+}
+
+#info-pic li {
+    background:#F33454;
+    float: left;
+    height: 50px;
+    margin-right: 35px;
+    width: 50px;
+}
+
+/*a.button_home  {
+  background: #5BA4ED;
+  font-size: 30px;
+  padding: 40px 50px;
+	position: relative;
+	top: 200px;
+	right: 10px;
+}*/
+
